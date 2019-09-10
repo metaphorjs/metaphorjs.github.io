@@ -3,8 +3,8 @@
 <head>
     <title>MetaphorJs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="bower_components/prism/themes/prism.css">
+    <link rel="stylesheet" href="assets/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/prism.css">
     <style>
         .footer {
             background-color: #f0f0f0;
@@ -13,88 +13,85 @@
     </style>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" role="navigation">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls=".navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
                 <a class="navbar-brand" href="#">MetaphorJs</a>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="#class">Class system</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Directives <span class="caret"></span></a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li><a  class="nav-link" href="#class">Class system</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Directives <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#directive-app">app</a></li>
-                            <li><a href="#directive-bind">bind, bind-html</a></li>
-                            <li><a href="#directive-class">class</a></li>
-                            <li><a href="#directive-cmp">cmp, cmp-prop</a></li>
-                            <li><a href="#directive-config">config</a></li>
-                            <li><a href="#directive-each">each, each-in-store</a></li>
-                            <li><a href="#directive-show">show, hide, if</a></li>
-                            <li><a href="#directive-ignore">ignore</a></li>
-                            <li><a href="#directive-include">include, transclude</a></li>
-                            <li><a href="#directive-init">init</a></li>
-                            <li><a href="#directive-model">model</a></li>
-                            <li><a href="#directive-options">options</a></li>
-                            <li><a href="#directive-src">src</a></li>
-                            <li><a href="#directive-view">view</a></li>
-                            <li><a href="#directive-click">click, dblclick, etc</a></li>
-                            <li><a href="#directive-disabled">disabled, selected, etc</a></li>
+                            <li class="dropdown-item"><a href="#directive-app">app</a></li>
+                            <li class="dropdown-item"><a href="#directive-bind">bind, bind-html</a></li>
+                            <li class="dropdown-item"><a href="#directive-class">class</a></li>
+                            <li class="dropdown-item"><a href="#directive-cmp">cmp, cmp-prop</a></li>
+                            <li class="dropdown-item"><a href="#directive-config">config</a></li>
+                            <li class="dropdown-item"><a href="#directive-each">each, each-in-store</a></li>
+                            <li class="dropdown-item"><a href="#directive-show">show, hide, if</a></li>
+                            <li class="dropdown-item"><a href="#directive-ignore">ignore</a></li>
+                            <li class="dropdown-item"><a href="#directive-include">include, transclude</a></li>
+                            <li class="dropdown-item"><a href="#directive-init">init</a></li>
+                            <li class="dropdown-item"><a href="#directive-model">model</a></li>
+                            <li class="dropdown-item"><a href="#directive-options">options</a></li>
+                            <li class="dropdown-item"><a href="#directive-src">src</a></li>
+                            <li class="dropdown-item"><a href="#directive-view">view</a></li>
+                            <li class="dropdown-item"><a href="#directive-click">click, dblclick, etc</a></li>
+                            <li class="dropdown-item"><a href="#directive-disabled">disabled, selected, etc</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Filters <span class="caret"></span></a>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Filters <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#filter-filter">filter</a></li>
-                            <li><a href="#filter-join">join</a></li>
-                            <li><a href="#filter-l">l</a></li>
-                            <li><a href="#filter-limitTo">limitTo</a></li>
-                            <li><a href="#filter-linkify">linkify</a></li>
-                            <li><a href="#filter-lowercase">lowercase</a></li>
-                            <li><a href="#filter-p">p</a></li>
-                            <li><a href="#filter-sortBy">sortBy</a></li>
-                            <li><a href="#filter-toArray">toArray</a></li>
-                            <li><a href="#filter-split">split</a></li>
-                            <li><a href="#filter-ucfirst">ucfirst</a></li>
-                            <li><a href="#filter-uppercase">uppercase</a></li>
+                            <li class="dropdown-item"><a href="#filter-filter">filter</a></li>
+                            <li class="dropdown-item"><a href="#filter-join">join</a></li>
+                            <li class="dropdown-item"><a href="#filter-l">l</a></li>
+                            <li class="dropdown-item"><a href="#filter-limitTo">limitTo</a></li>
+                            <li class="dropdown-item"><a href="#filter-linkify">linkify</a></li>
+                            <li class="dropdown-item"><a href="#filter-lowercase">lowercase</a></li>
+                            <li class="dropdown-item"><a href="#filter-p">p</a></li>
+                            <li class="dropdown-item"><a href="#filter-sortBy">sortBy</a></li>
+                            <li class="dropdown-item"><a href="#filter-toArray">toArray</a></li>
+                            <li class="dropdown-item"><a href="#filter-split">split</a></li>
+                            <li class="dropdown-item"><a href="#filter-ucfirst">ucfirst</a></li>
+                            <li class="dropdown-item"><a href="#filter-uppercase">uppercase</a></li>
                         </ul>
                     </li>
-                    <li><a href="#components">Components</a></li>
-                    <li><a href="#views">Views</a></li>
-                    <li><a href="#model">Model</a></li>
-                    <li><a href="#building">Building</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <span class="caret"></span></a>
+                    <li class="nav-item"><a class="nav-link" href="#components">Components</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#views">Views</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#model">Model</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#building">Building</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#animations">Animations</a></li>
-                            <li><a href="#i18n">I18n</a></li>
-                            <li><a href="#injection">Dependency Injection</a></li>
-                            <li><a href="#recursive">Recursive rendering</a></li>
-                            <li><a href="#dialogs">Dialogs</a></li>
+                            <li class="dropdown-item"><a href="#animations">Animations</a></li>
+                            <li class="dropdown-item"><a href="#i18n">I18n</a></li>
+                            <li class="dropdown-item"><a href="#injection">Dependency Injection</a></li>
+                            <li class="dropdown-item"><a href="#recursive">Recursive rendering</a></li>
+                            <li class="dropdown-item"><a href="#dialogs">Dialogs</a></li>
                             <li class="divider"></li>
-                            <li><a href="#more">And more</a></li>
+                            <li class="dropdown-item"><a href="#more">And more</a></li>
                         </ul>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="https://github.com/kuindji/metaphorjs">Github</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://github.com/metaphorjs/metaphorjs">Github</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
         </div>
-    </div>
+    </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
         <div class="container">
             <h1>MetaphorJs</h1>
-            <p>Javascript app and code framework (v0.3 beta)</p>
+            <p>Javascript app and code framework (v1.0 beta)</p>
         </div>
     </div>
 
@@ -123,25 +120,20 @@
                 <p>MetaphorJs neither has nor does provide functionality such as jQuery provides.
                 It also does not depend on any such library.</p>
 
-                <p>Browser support: IE6+, Firefox, Chrome (desktop/android),
-                    Opera, Safari (desktop/iOS), Blackberry, Android native</p>
-
                 <h3>Directives</h3>
                 <p>
                     <a href="#directive-app"><code>app</code></a>,
                     <a href="#directive-bind"><code>bind</code>, <code>bind-html</code></a>,
-                    <a href="#directive-class"><code>class</code></a>,
-                    <a href="#directive-cmp"><code>cmp</code>, <code>cmp-prop</code></a>,
-                    <a href="#directive-config"><code>config</code></a>,
-                    <a href="#directive-each"><code>each</code>, <code>each-in-store</code></a>,
+                    <a href="#directive-class"><code>class</code>, <code>style</code></a>,
+                    <a href="#directive-cmp"><code>cmp</code>, <code>controller</code></a>,
+                    <a href="#directive-each"><code>each</code></a>,
                     <a href="#directive-show"><code>show</code>, <code>hide</code>, <code>if</code></a>,
-                    <a href="#directive-ignore"><code>ignore</code></a>,
                     <a href="#directive-include"><code>include</code>, <code>transclude</code></a>,
                     <a href="#directive-init"><code>init</code></a>,
-                    <a href="#directive-model"><code>model</code></a>,
+                    <a href="#directive-model"><code>model</code>, <code>input</code></a>,
                     <a href="#directive-options"><code>options</code></a>,
                     <a href="#directive-src"><code>src</code></a>,
-                    <a href="#directive-view"><code>view</code></a>,
+                    <a href="#directive-view"><code>view</code>, <code>router</code></a>,
                     <a href="#directive-click"><code>click</code>, <code>dblclick</code>, etc</a>.
                     <a href="#directive-disabled"><code>disabled</code>, <code>selected</code>, etc</a>
                 </p>
@@ -151,15 +143,17 @@
                     <a href="#filter-filter"><code>filter</code></a>,
                     <a href="#filter-join"><code>join</code></a>,
                     <a href="#filter-l"><code>l</code></a>,
+                    <a href="#filter-p"><code>p</code></a>,
+                    <a href="#filter-pl"><code>pl</code></a>,
                     <a href="#filter-limitTo"><code>limitTo</code></a>,
                     <a href="#filter-linkify"><code>linkify</code></a>,
                     <a href="#filter-lowercase"><code>lowercase</code></a>,
-                    <a href="#filter-p"><code>p</code></a>,
+                    <a href="#filter-uppercase"><code>uppercase</code></a>,
                     <a href="#filter-sortBy"><code>sortBy</code></a>,
                     <a href="#filter-toArray"><code>toArray</code></a>,
                     <a href="#filter-split"><code>split</code></a>,
                     <a href="#filter-ucfirst"><code>ucfirst</code></a>,
-                    <a href="#filter-uppercase"><code>uppercase</code></a>
+                    <a href="#filter-ucfirst"><code>preloaded</code></a>
                 </p>
             </div>
             <div class="col-md-6">
@@ -168,18 +162,10 @@
     &lt;script src=&quot;metaphorjs.all.min.js&quot;&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;input mjs-model=&quot;.name&quot;/&gt;
-    &lt;p&gt;Hello, {{.name}}!&lt;/p&gt;
+    &lt;input {model}=&quot;this.name&quot;&gt;
+    &lt;p&gt;Hello, {{this.name}}!&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-                <h4>Demos</h4>
-                <ul>
-                    <li><a href="../demo/basics.html">Basics</a></li>
-                    <li><a href="../demo/tags.html">Tags</a></li>
-                    <li><a href="../demo/todo.html">Todo</a></li>
-                    <li><a href="../demo/recursive.html">Recursive</a></li>
-                    <li><a href="../demo/table-buffered.html">Buffered table</a></li>
-                </ul>
             </div>
         </div>
 
@@ -189,16 +175,14 @@
             <div class="col-md-12">
                 <h2 id="class">Class system</h2>
                 <p>MetaphorJs exposes a mechanism of creating and extending
-                    <a href="https://github.com/kuindji/metaphorjs-class">classes</a>
+                    <a href="https://github.com/metaphorjs/metaphorjs-class">classes</a>
                     in global or encapsulated
-                    <a href="https://github.com/kuindji/metaphorjs-namespace">namespaces</a>.
+                    <a href="https://github.com/metaphorjs/metaphorjs-namespace">namespaces</a>.
                 </p>
                 <p>By default, MetaphorJs provides encapsulated namespace
-                    (MetaphorJs.ns)
+                    (MetaphorJs)
                     and class system
-                    (MetaphorJs.cs)
                     which you can expose during <a href="#building">build phase</a> or later.</p>
-                <h3>MetaphorJs.cs</h3>
                 <pre><code class="language-javascript">// initialization cycle:
 // 1. $constructor (call parent constructor with this.$super())
 // 2. mixin's $beforeInit (mixins are not classes, they don't have $super(); '$beforeInit's
@@ -211,18 +195,22 @@
 // destroy cycle (call instance.$destroy())
 // 1. mixin's $beforeDestroy method
 // 2. plugin's $beforeHostDestroy method
-// 3. instance's destroy() method
+// 3. instance's onDestroy() method
 // 4. mixin's $afterDestroy method
 // 5. plugin's $destroy method
-// the $destroy method will nullify all instance properties and methods.
-// if you want to prevent this, return false from your destroy() method.
 
 // define(methodsAndProperties, statics)
-MetaphorJs.cs.define({
+const cls = require("metaphorjs-class/src/cls.js");
+const ns = require("metaphorjs-namespace/src/var/ns.js");
+const My = {};
+ns.register("My", My); // without it, classes will become MetaphorJs.My.Name
+
+cls.define({
     $class: "My.Person",
     firstName: null,
     lastName: null,
 
+    // generally, you don't use $constructor, unless you need plugins
     $constructor: function(firstName, lastName){
         // if you want to use plugins, this function must set them up
         // (probably take them from config)
@@ -258,10 +246,10 @@ var mixin = {
     }
 };
 
-MetaphorJs.cs.define({
+cls.define({
     $class: "My.ExtendedPerson",
     $extends: "My.Person",
-    $mixins: [mixin], // or ["MixinName"] where it was added to namespace as mixin.MixinName
+    $mixins: [mixin], // or ["MixinName"] where it was added to namespace such as mixin.MixinName
     age: null,
     $init: function(firstName, lastName, age) {
         this.$super(firstName, lastName);
@@ -272,8 +260,8 @@ MetaphorJs.cs.define({
     }
 });
 
-MetaphorJs.cs.define({
-    $class: "PluginClass",
+cls.define({
+    $class: "My.PluginClass",
     $init: function(hostObject, hostObjectArguments) {
         // plugin's $init and $constructor receive host object
         // as the first parameter, and
@@ -292,20 +280,20 @@ MetaphorJs.cs.define({
     // and yes, plugins can have their own plugins :)
 });
 
-MetaphorJs.cs.define({
-    $class: "PluginHost",
+My.PluginHost = cls.define({
+    // $class: "My.PluginHost", not needed in this case
     $constructor: function(cfg) {
         this.$plugins = cfg.plugins;
     }
 });
 
-var host = new MetaphorJs.PluginHost({
-    plugins: [PluginClass]
+var host = new My.PluginHost({
+    plugins: [My.PluginClass]
 });
 
 // you can use $extend shortcut to avoid calling "define()"
 // and there is a cs.BaseClass.$extend you can start with.
-var ClassWithoutName = MetaphorJs.My.ExtendedPerson.$extend({
+var ClassWithoutName = My.ExtendedPerson.$extend({
     getAge: function() {
         return this.$super() * 10;
     }
@@ -317,8 +305,8 @@ var PrototypedClass = function() {
 };
 PrototypedClass.prototype.someMethod = function(){};
 
-MetaphorJs.cs.define({
-    $class: "SomeClass",
+cls.define({
+    $class: "My.SomeClass",
     $extends: PrototypedClass,
     $constructor: function() {
         this.$super(); // call PrototypedClass constructor
@@ -326,35 +314,11 @@ MetaphorJs.cs.define({
 });
 
 // instantiate with variable number of arguments:
-MetaphorJs.My.ExtendedPerson.$instantiate(["John", "Smith", 30]);
+My.ExtendedPerson.$instantiate(["John", "Smith", 30]);
 
-var person = MetaphorJs.cs.factory("My.ExtendedPerson", "John", "Smith", 30);
-var another = new MetaphorJs.My.ExtendedPerson("Jane", "Smith", 29);
+var person = cls.factory("My.ExtendedPerson", "John", "Smith", 30);
+var another = new My.ExtendedPerson("Jane", "Smith", 29);
                 </code></pre>
-
-                <h3>MetaphorJs.ns</h3>
-                <pre><code class="language-javascript">
-var ns = new MetaphorJs.lib.Namespace; // global namespace
-var cs = new MetaphorJs.lib.Class(ns); // global class system
-var encapsulated = {};
-var encNs = new MetaphorJs.lib.Namespace(encapsulated); // hidden namespace
-var encCs = new MetaphorJs.lib.Class(encNs); // hidden class system
-
-cs.define({
-    $class: "My.TestClass"
-});
-// window.My.TestClass
-
-encCs.define({
-    $class: "My.TestClass"
-});
-// encapsulated.My.TestClass
-
-// in the default namespace you can use both
-// "MetaphorJs.Any.Thing" and "Any.Thing" - it is the same.
-// Your class will be available as MetaphorJs.Any.Thing
-                </code></pre>
-
                 <p></p>
             </div>
         </div>
@@ -364,19 +328,28 @@ encCs.define({
         <div class="row">
             <div class="col-md-12">
                 <h2 id="directives">Directives</h2>
+                <p>Most directives have its own configuration which you can set
+                    via <code>{directive.$property}="expression or static"</code>. 
+                    Some properties expect expressions by default, some expect static values.
+                    But you can force value to be <code>{directive.$property}*="expression"</code> or 
+                    <code>{directive.$property}:="static"</code>
+                </p>
+                <p>Some directives have events you can subscribe to:
+                    <code>{directive.$on--event-name}="this.callFunc()"</code>
+                </p>
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-12">
                 <h3 id="directive-app">mjs-app</h3>
-                <p><code>mjs-app</code> directive instantiates an App class (MetaphorJs.cmp.App by default).</p>
+                <p><code>mjs-app</code> directive instantiates an App class (MetaphorJs.app.App by default).</p>
                 <p>You can provide your own class name as a value of this attribute. Your class
-                    must extend MetaphorJs.cmp.App</p>
+                    must extend MetaphorJs.app.App</p>
                 <div class="col-md-6">
-                    <pre><code class="language-javascript">MetaphorJs.define({
+                    <pre><code class="language-javascript">MetaphorJs.app.App.$extend({
     $class: "My.App",
-    $extends: "MetaphorJs.cmp.App",
+    $extends: "MetaphorJs.app.App",
     initApp: function() {
         this.value('someDependency', someValue);
         this.onAvailable("componentId").done(function(cmp){
@@ -395,7 +368,7 @@ encCs.define({
         <div class="row">
             <div class="col-md-12">
                 <p>You can also instantiate an app without <code>mjs-app</code> directive any time you want.</p>
-                <pre><code class="language-javascript">MetaphorJs.initApp(elem, stringClass, objectData, autorun).done(function(app){
+                <pre><code class="language-javascript">MetaphorJs.app.init(elem, stringClass, objectData, autorun).done(function(app){
     // if autorun = false
     // so something with the app: provide values and services, subscribe to events, etc
     app.run();
@@ -407,31 +380,29 @@ encCs.define({
 
         <div class="row">
             <div class="col-md-12">
-                <h3 id="directive-bind">mjs-bind, mjs-bind-html, inline and attribute binding</h3>
-                <p><code>mjs-bind</code> and <code>mjs-bind-html</code> directives replace element's content
+                <h3 id="directive-bind">{bind}, {bind-html}, inline and attribute binding</h3>
+                <p><code>{bind}</code> and <code>{bind-html}</code> directives replace element's content
                     with variable's value.</p>
-                <pre><code class="language-markup">&lt;div mjs-init=&quot;.a = 1&quot;&gt;
-    &lt;p mjs-bind=&quot;.a&quot;&gt;&lt;/p&gt;
+                <p>Properties: (for both, bind and bind-html)</p>
+                <ul>
+                    <li><code>{bind.$if}="boolean expression"</code></li>
+                    <li><code>{bind.$recursive}="boolean expression"</code></li>
+                    <li><code>{bind.$once}="boolean expression"</code></li>
+                    <li><code>{bind.$locked}="boolean expression"</code> (makes field read only)</li>
+                    <li><code>{bind.$on--change}="this.someFunc()"</code></li>
+                </ul>
+                <pre><code class="language-markup">&lt;div {init}=&quot;this.a = 1&quot;&gt;
+    &lt;p {bind}=&quot;this.a&quot;&gt;&lt;/p&gt;
 &lt;/div&gt;</code></pre>
-                <p>If you use <code>mjs-bind</code> on a input/textarea/select/checkbox/radio field,
+                <p>If you use <code>{bind}</code> on a input/textarea/select/checkbox/radio field,
                 field's value will be changed. This is a one-way binding, so changing field's value
                 manually will not change the variable.</p>
-                <p>Inline binding works within any text or attribute (except special <code>mjs-</code> attributes):</p>
-                <pre><code class="language-markup">&lt;a href=&quot;{{.href}}&quot; title=&quot;{{.title}}&quot;&gt;{{.text}}&lt;/a&gt;
+                <p>Inline binding works within any text or [attribute]:</p>
+                <pre><code class="language-markup">&lt;a [href]=&quot;this.href&quot; [title]=&quot;this.title&quot;&gt;{{this.text}}&lt;/a&gt;
 &lt;p&gt;
-    You can insert variables {{.a}} {{.b}} {{.a + .b}} wherever you want.
+    You can insert variables {{this.a}} {{this.b}} {{this.a + this.b}} wherever you want.
 &lt;/p&gt;</code></pre>
-                <p>Use <code>mjs-bind-html</code> if you want to insert html. Otherwise, html tags will be escaped.</p>
-                <!--<h4>Object.observe()</h4>
-                <p>MetaphorJs supports <code>Object.observe()</code> method although it can't replace
-                normal digest cycle since you can use any kind of expression including functions.
-                So, digest cycle stays in place and you occasionally have to call scope.$check(), but
-                if native version of Object.observe is present (MetaphorJs ignores polyfills), all
-                non-expression checks will be skipped, making digest cycle potentially faster.</p>
-                <p>Make sure to initialize scope variable before data binding happens, otherwise
-                it will be treated as an expression.</p>
-                <p>Also, observe() will not be used if output pipes are present since they can potentially return
-                different values given the same input.</p>-->
+                <p>Use <code>{bind-html}</code> if you want to insert html. Otherwise, html tags will be escaped.</p>
             </div>
         </div>
 
@@ -439,14 +410,19 @@ encCs.define({
 
         <div class="row">
             <div class="col-md-12">
-                <h3 id="directive-class">mjs-class</h3>
+                <h3 id="directive-class">{class}</h3>
+                <p>Properties:</p>
+                <ul>
+                    <li><code>{class.$animate}="boolean expression"</code></li>
+                    <li><code>{class.$on--change}="this.someFunc()"</code></li>
+                </ul>
                 <p>
-                    This attribute toggles element's class. There are two ways of providing class names:
+                    This attribute toggles element's class. There are two ways of setting classes:
                 </p>
                 <ol>
-                    <li><code>mjs-class=".variableName"</code> -
-                        this way the class will change as soon as variable changes.</li>
-                    <li><code>mjs-class="{class1: .var1, class2: .var2}"</code> - this will toggle classes
+                    <li><code>{class}="this.classes"</code> -
+                        the variable can contain string "name", object {name: true} or array [name, name].</li>
+                    <li><code>{class.name}="this.bool"</code> - this will toggle classes
                     based on how variables resolve to true/false state.</li>
                 </ol>
 
@@ -457,7 +433,27 @@ encCs.define({
 
         <div class="row">
             <div class="col-md-12">
-                <h3 id="directive-cmp">mjs-cmp, mjs-cmp-prop</h3>
+                <h3 id="directive-class">{style}</h3>
+                <p>Properties:</p>
+                <ul>
+                    <li><code>{style.$on--change}="this.someFunc()"</code></li>
+                </ul>
+                <p>
+                    This attribute changes element's style. There are two ways of setting classes:
+                </p>
+                <ol>
+                    <li><code>{style}="this.style"</code> -
+                        the variable is an object {styleProperty: true}.</li>
+                    <li><code>{style.property-name}="this.value"</code></li>
+                </ol>
+
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3 id="directive-cmp">{cmp}, {controller}</h3>
                 <p>
                     See <a href="#components">Components</a> section.
                 </p>
@@ -468,53 +464,22 @@ encCs.define({
 
         <div class="row">
             <div class="col-md-12">
-                <h3 id="directive-config">mjs-config</h3>
-                <p><code>mjs-config="{property: 'value'}"</code> allows you to provide
-                    config variables to some components. Although the faster way of doing this is by using
-                    <code>data-</code> attributes: <code>data-property="value".</code>
+                <h3 id="directive-each">{each}</h3>
+                <p><code>{each}</code> directive generates repeated content based on array of values or from data store.
                 </p>
-                <p>This will come handy when configuring <code>mjs-each</code></p>
-            </div>
-        </div>
-
-        <hr>
-
-        <div class="row">
-            <div class="col-md-12">
-                <h3 id="directive-each">mjs-each, mjs-each-in-store</h3>
-                <p><code>mjs-each</code> directive generates repeated content based on array of values.
-                    <code>mjs-each-in-store</code> does the same but with data stores (see <a href="#model">Model</a>).
-                </p>
-                <pre><code class="language-markup">&lt;ul mjs-init=&quot;.list = ['Jane', 'John', 'Jack']&quot;&gt;
-    &lt;li mjs-each=&quot;name in .list&quot;&gt;{{.name}}&lt;/li&gt;
+                <pre><code class="language-markup">&lt;ul {init}=&quot;this.list = ['Jane', 'John', 'Jack']&quot;&gt;
+    &lt;li {each}=&quot;name in this.list&quot;&gt;{{this.name}}&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
                 <p>You can use filters such as <code>filter</code>, <code>sortBy</code>, <code>limitTo</code>:
-                <code>mjs-each="name in .list | sortBy:$ | limitTo:1"</code></p>
-                <p>Config options: (via <code>mjs-config</code> or <code>data-</code>)</p>
+                <code>{each}="name in this.list | sortBy:$ | limitTo:1"</code></p>
+                <p>Properties:</p>
                 <ul>
-                    <li><code>trackBy</code>: identify items by this property ($ - for item itself)</li>
-                    <li><code>buffered</code>: render only visible part of the list</li>
-                    <li><code>itemSize</code>: in or for buffering to work you must provide item width or height</li>
-                    <li><code>itemsOffsite</code>: how many items to render outside visible area</li>
-                    <li><code>stub</code>: tag name of top and bottom stubs (default: div)</li>
-                    <li><code>horizontal</code>: what type of scrolling will be used (default: false)</li>
-                    <li><code>animateMove</code>: animate items changing place
-                        (applies translateX/Y properties during mjs-move stage.
+                    <li><code>{each.$trackBy}="propname"</code>: identify items by this property ($ - for item itself)</li>
+                    <li><code>{each.$animate}="this.bool"</code>: animate item appearance and disappearance</li>
+                    <li><code>{each.$animate-move}="this.bool"</code>: animate items changing place
+                        (applies translateX/Y properties during move stage.
                         See <a href="#animations">Animations</a>)</li>
-                    <li><code>id</code>: make this component available via $app.onAvailable("...")</li>
-                    <li><code>pullNext</code>: (each-in-store) automatically pull next page from remote source</li>
-                    <li>
-                        <code>observable</code>: make this component observable (<code>list.on("event", fn)</code>).
-                        Events:
-                        <ul>
-                            <li>"render": list has been rendered for the first time</li>
-                            <li>"change": list has been changed, new elements appeared, old elements removed</li>
-                            <li>"bufferchange": scroll buffer has changed</li>
-                            <li>"bufferupdate": elements were updated based on new scroll buffer</li>
-                            <li>"pull": (mjs-each-in-store) new data was pulled from remote source</li>
-                            <li>"destroy": list was destroyed</li>
-                        </ul>
-                    </li>
+                    <li><code>{each.$id}="this.bool"</code>: make ListRenderer instance available via $app.onAvailable("...")</li>
                 </ul>
             </div>
         </div>
@@ -523,12 +488,26 @@ encCs.define({
 
         <div class="row">
             <div class="col-md-12">
-                <h3 id="directive-show">mjs-show, mjs-hide, mjs-if</h3>
+                <h3 id="directive-show">{show}, {hide}, {if}</h3>
                 <p>These three show or hide content based on variable value.</p>
                 <ul>
-                    <li><code>mjs-show=".var"</code>: show element if .var is true (applies display="none")</li>
-                    <li><code>mjs-hide=".var"</code>: hide element if .var is true (applies display="none")</li>
-                    <li><code>mjs-if=".var"</code>: show element if .var is true (removes element from dom)</li>
+                    <li><code>{show}="this.bool"</code>: changes style.display</li>
+                    <li><code>{hide}="this.bool"</code>: changes style.display</li>
+                    <li><code>{if}="this.bool"</code>: removes element from dom</li>
+                </ul>
+                <p>Properties: (show,hide)</p>
+                <ul>
+                    <li><code>{show.$display}="block"</code> static display value</li>
+                    <li><code>{show.$animate}="this.bool"</code></li>
+                    <li><code>{show.$on--show}="this.someFunc()"</code></li>
+                    <li><code>{show.$on--hide}="this.someFunc()"</code></li>
+                </ul>
+                <p>Properties: (if)</p>
+                <ul>
+                    <li><code>{show.$animate}="this.bool"</code></li>
+                    <li><code>{show.$once}="this.bool"</code></li>
+                    <li><code>{show.$on--show}="this.someFunc()"</code></li>
+                    <li><code>{show.$on--hide}="this.someFunc()"</code></li>
                 </ul>
             </div>
         </div>
@@ -537,19 +516,9 @@ encCs.define({
 
         <div class="row">
             <div class="col-md-12">
-                <h3 id="directive-ignore">mjs-ignore</h3>
-                <p>Ignore given element and all its children</p>
-            </div>
-        </div>
-
-
-        <hr>
-
-        <div class="row">
-            <div class="col-md-12">
-                <h3 id="directive-include">mjs-include, mjs-transclude</h3>
+                <h3 id="directive-include">{include}, {transclude}</h3>
                 <p>Replaces element's content with a template.
-                    (Original content will be available via <code>mjs-transclude</code>)</p>
+                    (Original content will be available via <code>{transclude}</code>)</p>
                 <div class="col-md-6">
                     <h4>Defining templates</h4>
                     <pre><code class="language-markup">&lt;script type=&quot;text/mjs-template&quot; id=&quot;tpl1&quot;&gt;
@@ -557,20 +526,23 @@ encCs.define({
 &lt;/script&gt;
 &lt;mjs-template id=&quot;tpl2&quot;&gt;
     &lt;p&gt;Template content&lt;/p&gt;
-    &lt;div mjs-transclude&gt;&lt;/div&gt;
+    &lt;div {transclude}&gt;&lt;/div&gt;
 &lt;/mjs-template&gt;
 &lt;template id=&quot;tpl3&quot;&gt;
     &lt;p&gt;Template content&lt;/p&gt;
 &lt;/template&gt;</code></pre>
+                    <pre><code class="language-javascript">
+MetaphorJs.app.Template.add("name", "markup")
+                    </code></pre>
                 </div>
                 <div class="col-md-6">
                     <h4>Using templates</h4>
-                    <pre><code class="language-markup">&lt;div mjs-init=&quot;.tpl = 'tpl1'&quot;&gt;
-    &lt;div mjs-include=&quot;.tpl&quot;&gt;&lt;/div&gt;
-    &lt;div mjs-include=&quot;'tpl2'&quot;&gt;
+                    <pre><code class="language-markup">&lt;div {init}=&quot;this.tpl = 'tpl1'&quot;&gt;
+    &lt;div {include}=&quot;this.tpl&quot;&gt;&lt;/div&gt;
+    &lt;div {include}:=&quot;tpl2&quot;&gt;
         &lt;p&gt;Transcluded text&lt;/p&gt;
     &lt;/div&gt;
-    &lt;mjs-include src=&quot;.tpl&quot;&gt;&lt;/mjs-include&gt;
+    &lt;!-- include tpl3 --&gt;
 &lt;/div&gt;</code></pre>
                 </div>
             </div>
@@ -580,7 +552,7 @@ encCs.define({
 
         <div class="row">
             <div class="col-md-12">
-                <h3 id="directive-init">mjs-init</h3>
+                <h3 id="directive-init">{init}</h3>
                 <p>Executes an expression agains current scope. You can initialize variables this way</p>
             </div>
         </div>
@@ -589,21 +561,22 @@ encCs.define({
 
         <div class="row">
             <div class="col-md-12">
-                <h3 id="directive-model">mjs-model</h3>
-                <p><code>mjs-model</code> applies to input fields and
-                    is similar to <code>mjs-bind</code> except that it works in both directions.</p>
-                <pre><code class="language-markup">&lt;input mjs-model=&quot;.var&quot;/&gt;</code></pre>
-                <p>The directive is configurable two options:</p>
+                <h3 id="directive-model">{model}</h3>
+                <p><code>{model}</code> applies to input fields and
+                    is similar to <code>{bind}</code> except that it works in both directions.</p>
+                <pre><code class="language-markup">&lt;input {model}=&quot;this.var&quot;/&gt;</code></pre>
+                <p>Properties:</p>
                 <ul>
-                    <li><code>type</code>: data type (number|date|bool); (for now only number is recognized)</li>
+                    <li><code>{model.$if}="this.bool"</code>: enable/disable directive</li>
                     <li>
-                        <code>binding</code>:
+                        <code>{model.$binding}="both"</code>:
                         <ul>
                             <li>"both" or none - two-way data binding</li>
                             <li>"input" - one way from input to scope</li>
-                            <li>"scope" - one way from scope to input (like <code>mjs-bind</code>)</li>
+                            <li>"scope" - one way from scope to input (like <code>{bind}</code>)</li>
                         </ul>
                     </li>
+                    <li><code>{model.$on--change}="this.someFunc()"</code></li>
                 </ul>
             </div>
         </div>
@@ -612,21 +585,19 @@ encCs.define({
 
         <div class="row">
             <div class="col-md-12">
-                <h3 id="directive-options">mjs-options</h3>
+                <h3 id="directive-options">{options}</h3>
                 <p>
                     Renders option list from array of values. The format is either:
-                    <code>mjs-options=".varName"</code> or <code>mjs-options="{ ... } in .varName"</code> where
-                    { ... } is item config (default item config is {name: .item, value: .$index}.<br>
-                    Config recognizes the following keys:
+                    <code>{options}="this.list"</code> or <code>{options}="{ ... } in this.list"</code> where
+                    { ... } is item config (default item config is {name: this.item, value: this.$index, group: null}.<br>
+                    Properties:
                 </p>
                 <ul>
-                    <li><code>name</code>: (string) option name</li>
-                    <li><code>value</code>: (string) option value</li>
-                    <li><code>disabled</code>: (bool) is option disabled</li>
-                    <li><code>group</code>: (string) option group</li>
-                    <li><code>disabledGroup</code>: (bool) is option group disabled</li>
+                    <li><code>{options.$placeholder-name}="this.name"</code>: generate default option</li>
+                    <li><code>{options.$placeholder-value}="this.value"</code>: generate default option</li>
+                    <li><code>{options.$keep-default}="this.bool"</code>: keep option from markup</li>
                 </ul>
-                <pre><code class="language-markup">&lt;select mjs-init=&quot;.list=['Jane', 'John', 'Jack']&quot; mjs-options=&quot;{name: .item, value: .$index} in .list&quot;&gt;
+                <pre><code class="language-markup">&lt;select {init}=&quot;this.list=['Jane', 'John', 'Jack']&quot; {options}=&quot;{name: this.item, value: this.$index} in this.list&quot;&gt;
 &lt;/select&gt;</code></pre>
             </div>
         </div>
@@ -635,11 +606,13 @@ encCs.define({
 
         <div class="row">
             <div class="col-md-12">
-                <h3 id="directive-src">mjs-src</h3>
-                <p>Sets and changes image's src attribute. Configurable with two options:</p>
+                <h3 id="directive-src">{src}</h3>
+                <p>Sets and changes image's src attribute. Properties:</p>
                 <ul>
-                    <li><code>deferred</code>: only load images when they are visible on screen</li>
-                    <li><code>noPreload</code>: do not use image preloader</li>
+                    <li><code>{src.$deferred}="this.bool"</code>: only load images when they are visible on screen</li>
+                    <li><code>{src.$no-preload}="this.bool"</code>: do not use image preloader</li>
+                    <li><code>{src.$no-cache}="this.bool"</code>: add ?rnd to image url</li>
+                    <li><code>{src.$preload-size}="this.size"</code>: either static 'attr' or {width, height} object. Set image size while loading</li>
                 </ul>
             </div>
         </div>
@@ -648,7 +621,7 @@ encCs.define({
 
         <div class="row">
             <div class="col-md-12">
-                <h3 id="directive-view">mjs-view</h3>
+                <h3 id="directive-view">{view}</h3>
                 <p>See <a href="#views">Views</a></p>
             </div>
         </div>
@@ -658,27 +631,48 @@ encCs.define({
 
         <div class="row">
             <div class="col-md-12">
-                <h3 id="directive-click">mjs-click, mjs-dblclick, etc</h3>
+                <h3 id="directive-click">(click), (dblclick), etc</h3>
                 <p>Executes an expression against current scope on dom event.
                     The full list of event directives:
-                    <code>mjs-click</code>,
-                    <code>mjs-dblclick</code>,
-                    <code>mjs-mousedown</code>,
-                    <code>mjs-mouseup</code>,
-                    <code>mjs-mouseover</code>,
-                    <code>mjs-mouseout</code>,
-                    <code>mjs-mousemove</code>,
-                    <code>mjs-keydown</code>,
-                    <code>mjs-keyup</code>,
-                    <code>mjs-keypress</code>,
-                    <code>mjs-submit</code>,
-                    <code>mjs-focus</code>,
-                    <code>mjs-blur</code>,
-                    <code>mjs-copy</code>,
-                    <code>mjs-cut</code>,
-                    <code>mjs-paste</code>,
-                    <code>mjs-enter</code>
+                    <code>click</code>,
+                    <code>dblclick</code>,
+                    <code>mousedown</code>,
+                    <code>mouseup</code>,
+                    <code>mouseover</code>,
+                    <code>mouseout</code>,
+                    <code>mousemove</code>,
+                    <code>keydown</code>,
+                    <code>keyup</code>,
+                    <code>keypress</code>,
+                    <code>submit</code>,
+                    <code>focus</code>,
+                    <code>blur</code>,
+                    <code>copy</code>,
+                    <code>cut</code>,
+                    <code>paste</code>,
+                    <code>enter</code>
                 </p>
+                <p>Properties</p>
+                <ul>
+                    <li><code>(click.$prevent-default)="this.bool"</code></li>
+                    <li><code>(click.$stop-propagation)="this.bool"</code></li>
+                    <li><code>(click.$stop-immediate-propagation)="this.bool"</code></li>
+                    <li><code>(click.$if)="this.bool"</code></li>
+                    <li><code>(click.$not)="selector"</code>: do not execute if target's selector matches selector</li>
+                </ul>
+                <p>Multiple handlers</p>
+                <ul>
+                    <li><code>(click)="this.someFunc()"</code>: single handler</li>
+                    <li><code>(click.one)="this.someFunc()"</code>: multiple handlers</li>
+                    <li><code>(click.two)="this.anotherFunc()"</code>:  multiple handlers</li>
+                </ul>
+                <p>Multiple event listeners</p>
+                <ul>
+                    <li><code>(first|click)="this.someFunc()"</code>: first directive instance</li>
+                    <li><code>(first|click.$if)="this.condition"</code></li>
+                    <li><code>(second|click)="this.anotherFunc()"</code>: second directive instance</li>
+                    <li><code>(second|click.$not)=".ignore"</code></li>
+                </ul>
             </div>
         </div>
 
@@ -686,14 +680,14 @@ encCs.define({
 
         <div class="row">
             <div class="col-md-12">
-                <h3 id="directive-disabled">mjs-disabled, mjs-selected, etc</h3>
+                <h3 id="directive-disabled">{disabled}, {selected}, etc</h3>
                 <p>These boolean directives add or remove respective attribute based on scope value:
-                    <code>mjs-selected</code>,
-                    <code>mjs-checked</code>,
-                    <code>mjs-disabled</code>,
-                    <code>mjs-readonly</code>,
-                    <code>mjs-open</code>,
-                    <code>mjs-required</code>.
+                    <code>selected</code>,
+                    <code>checked</code>,
+                    <code>disabled</code>,
+                    <code>readonly</code>,
+                    <code>open</code>,
+                    <code>required</code>.
                 </p>
             </div>
         </div>
@@ -704,11 +698,13 @@ encCs.define({
             <div class="col-md-12">
                 <h2 id="filters">Filters</h2>
                 <p>There are two types of filters: input filters and output filters. Input filters work in
-                conjunction with <code>mjs-model</code>, they process user input before applying to the scope.</p>
-                <pre><code class="language-markup">&lt;p mjs-bind=&quot;{{.var | filterName:filterParam&quot;&gt;&lt;/p&gt;
-&lt;p&gt;{{.var | filterName:filterParam}}&lt;/p&gt;
-&lt;input mjs-model=&quot;filterName:filterParam &gt;&gt; .var&quot;/&gt;</code></pre>
+                conjunction with <code>{model}</code>, they process user input before applying to the scope.</p>
+                <pre><code class="language-markup">&lt;p {bind}=&quot;this.var | filterName:filterParam&quot;&gt;&lt;/p&gt;
+&lt;p&gt;{{this.var | filterName:filterParam}}&lt;/p&gt;
+&lt;input {model}=&quot;filterName:filterParam &gt;&gt; this.var&quot;/&gt;</code></pre>
                 <p>It is possible to use both input and output filters in the same expression.</p>
+                <p>Filter params can be static <code>filter:'param'</code> or expressions
+                    <code>filter:this.value</code>.</p>
             </div>
         </div>
 
@@ -740,8 +736,8 @@ encCs.define({
                         </ul>
                     </li>
                 </ul>
-                <pre><code class="language-markup">&lt;ul mjs-init=&quot;.list = ['Jane', 'John', 'Jack']&quot;&gt;
-    &lt;li mjs-each=&quot;name in .list | filter:'Ja'&quot;&gt;{{.name}}&lt;/li&gt;
+                <pre><code class="language-markup">&lt;ul {init}=&quot;this.list = ['Jane', 'John', 'Jack']&quot;&gt;
+    &lt;li {each}=&quot;name in this.list | filter:'Ja'&quot;&gt;{{this.name}}&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
             </div>
         </div>
@@ -752,8 +748,8 @@ encCs.define({
             <div class="col-md-12">
                 <h3 id="filter-sortBy">| sortBy:field:direction</h3>
                 <p>Sorts array by a given field in a given direction</p>
-                <pre><code class="language-markup">&lt;ul mjs-init=&quot;.list = ['Jane', 'John', 'Jack']&quot;&gt;
-&lt;li mjs-each=&quot;name in .list | sortBy:'$':'desc'&quot;&gt;{{.name}}&lt;/li&gt;
+                <pre><code class="language-markup">&lt;ul {init}=&quot;this.list = ['Jane', 'John', 'Jack']&quot;&gt;
+&lt;li {each}=&quot;name in this.list | sortBy:'$':'desc'&quot;&gt;{{this.name}}&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
             </div>
         </div>
@@ -828,7 +824,7 @@ encCs.define({
             <div class="col-md-12">
                 <h3 id="filter-split">| split:separator:limit >></h3>
                 <p>Split given string value</p>
-                <pre><code class="language-markup">&lt;textarea mjs-model='split:&quot;\n&quot; &gt;&gt; .list'&gt;&lt;/textarea&gt;</code></pre>
+                <pre><code class="language-markup">&lt;textarea {model}='split:&quot;\n&quot; &gt;&gt; this.list'&gt;&lt;/textarea&gt;</code></pre>
             </div>
         </div>
 
@@ -846,7 +842,7 @@ encCs.define({
 
         <div class="row">
             <div class="col-md-12">
-                <h3 id="filter-p">| p</h3>
+                <h3 id="filter-p">| p; | pl</h3>
                 <p>See <a href="#i18n">I18n</a></p>
             </div>
         </div>
@@ -1415,7 +1411,7 @@ dialog.show();</code></pre>
 };</code></pre>
                 <p>myClass.js</p>
                 <pre><code class="language-javascript">var myFunc = require("./func/myFunc.js"),
-    trim = require("../../metaphorjs/src/func/trim.js");
+    trim = require("metaphorjs/src/func/trim.js");
 
 var MyClass = function() {
 };
@@ -1493,11 +1489,11 @@ module.exports = MyClass;</code></pre>
         </div>
     </div>
 
-    <script src="bower_components/prism/prism.js"></script>
-    <script src="bower_components/prism/components/prism-markup.js"></script>
-    <script src="bower_components/prism/components/prism-javascript.js"></script>
-    <script src="bower_components/prism/components/prism-css.js"></script>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <script src="assets/prism.js"></script>
+    <script src="assets/bootstrap.min.js"></script>
 </body>
 </html>
